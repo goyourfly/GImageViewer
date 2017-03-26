@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.goyourfly.demo_image_viewer.MainActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/image"
+            android:src="@mipmap/timg"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:textSize="14sp"
+            android:textColor="#333"
+            android:text="花半开最美，情留白最浓，懂得给生命留白，亦是一种生活的智慧。淡泊以明志，宁静以致远，懂得给心灵留白，方能在纷杂繁琐的世界，淡看得失，宠辱不惊，去意无留；懂得给感情留白，方能持久生香，留有余地，相互欣赏，拥有默契；懂得给生活留白，揽一份诗意，留一份淡定，多一份睿智，生命方能如诗如画。人心，远近相安，时光，浓淡相宜。有些风景要远观，才能美好；有些人情要淡然，才会久远，人生平淡更持久，留白方能生远，莲养心中，随遇而安，生命的最美不过是懂得的距离。守候着自己的世界，或忙或累，或喜或悲，都是一种充实。闲时，静坐一隅，执盏遐思，过去的、现在的、未来的，喜的、悲的...什么都可以去想。或许，美好的东西，本就不该遗忘，怀念也好，思念也罢，用心感受，何尝不是一种幸福？每个人，肩上的背囊，都装满了自己的故事，或伤或痛，不懂卸载，当压的自己，连呼吸都是一种痛的时候，才学会拐弯。有些人，一转身，便走成了背影，有些事，一轮回，便旧成了曾经；学会宽恕自己，原谅错误，想要的，努力去争取；想忘的，时间会帮你。"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    </ScrollView>
+
+    <FrameLayout
+        android:layout_gravity="center"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</FrameLayout>
