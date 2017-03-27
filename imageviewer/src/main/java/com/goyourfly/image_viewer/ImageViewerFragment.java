@@ -25,6 +25,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.CenterCrop;
+import com.bumptech.glide.load.resource.bitmap.FitCenter;
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.SimpleTarget;
 
 import net.soulwolf.widget.ratiolayout.RatioDatumMode;
 import net.soulwolf.widget.ratiolayout.widget.RatioFrameLayout;
@@ -32,6 +37,7 @@ import net.soulwolf.widget.ratiolayout.widget.RatioImageView;
 
 import java.util.ArrayList;
 import java.util.List;
+
 
 
 public class ImageViewerFragment extends Fragment {
@@ -134,12 +140,17 @@ public class ImageViewerFragment extends Fragment {
         }
 
         @Override
-        public void onBindViewHolder(MyViewHolder holder, int position) {
+        public void onBindViewHolder(final MyViewHolder holder, int position) {
 
             Glide.with(holder.imageView.getContext())
                     .load(mData.get(position))
                     .placeholder(colorDrawable)
-                    .into(holder.imageView);
+                    .into(new SimpleTarget<GlideDrawable>() {
+                        @Override
+                        public void onResourceReady(GlideDrawable resource, GlideAnimation<? super GlideDrawable> glideAnimation) {
+                            holder.imageView.setImageDrawable(resource);
+                        }
+                    });
         }
 
         @Override

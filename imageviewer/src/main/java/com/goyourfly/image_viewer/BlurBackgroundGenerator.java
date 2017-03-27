@@ -6,6 +6,8 @@ import android.graphics.Canvas;
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.graphics.Paint;
+import android.graphics.Rect;
+import android.graphics.RectF;
 import android.os.Parcel;
 import android.widget.ImageView;
 
@@ -40,12 +42,14 @@ public class BlurBackgroundGenerator implements BackgroundGenerator{
         ColorMatrix colorMatrix = new ColorMatrix();
         colorMatrix.setScale(scale,scale,scale,1);
 
-        Bitmap newBitmap = Bitmap.createBitmap(bitmap.getWidth(),bitmap.getHeight(), Bitmap.Config.ARGB_8888);
+        Bitmap newBitmap = Bitmap.createBitmap(bitmap.getWidth()/2,bitmap.getHeight()/2, Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(newBitmap);
         Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
         paint.setColorFilter(new ColorMatrixColorFilter(colorMatrix));
-        canvas.drawBitmap(bitmap,0,0,paint);
+        Rect rectF = new Rect(0,0,bitmap.getWidth(),bitmap.getHeight());
+        RectF rectT = new RectF(0,0,newBitmap.getWidth(),newBitmap.getHeight());
+        canvas.drawBitmap(bitmap,rectF,rectT,paint);
 
-        Blurry.with(context).radius(50).from(newBitmap).into(view);
+        Blurry.with(context).radius(20).from(newBitmap).into(view);
     }
 }

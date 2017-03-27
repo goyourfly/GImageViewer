@@ -24,25 +24,29 @@ public class MainActivity extends AppCompatActivity {
         mMain = findViewById(R.id.activity_main);
 
         final ArrayList<Uri> list = new ArrayList<>();
-        list.add(Uri.parse("http://d.hiphotos.baidu.com/image/pic/item/5882b2b7d0a20cf482c772bf73094b36acaf997f.jpg"));
-        list.add(Uri.parse("http://g.hiphotos.baidu.com/image/pic/item/10dfa9ec8a1363270c254f53948fa0ec09fac782.jpg"));
-        list.add(Uri.parse("http://c.hiphotos.baidu.com/image/pic/item/bf096b63f6246b6086073e14eef81a4c510fa241.jpg"));
-        list.add(Uri.parse("http://h.hiphotos.baidu.com/image/pic/item/80cb39dbb6fd5266cfe0b174ae18972bd5073682.jpg"));
-        list.add(Uri.parse("http://g.hiphotos.baidu.com/image/pic/item/9e3df8dcd100baa1cb7acbdb4210b912c8fc2e7f.jpg"));
-        list.add(Uri.parse("http://c.hiphotos.baidu.com/image/pic/item/cc11728b4710b912c2b57a9ec6fdfc039245225d.jpg"));
-        list.add(Uri.parse("http://d.hiphotos.baidu.com/image/pic/item/5882b2b7d0a20cf482c772bf73094b36acaf997f.jpg"));
-        list.add(Uri.parse("http://g.hiphotos.baidu.com/image/pic/item/10dfa9ec8a1363270c254f53948fa0ec09fac782.jpg"));
-        list.add(Uri.parse("http://c.hiphotos.baidu.com/image/pic/item/bf096b63f6246b6086073e14eef81a4c510fa241.jpg"));
-        list.add(Uri.parse("http://h.hiphotos.baidu.com/image/pic/item/80cb39dbb6fd5266cfe0b174ae18972bd5073682.jpg"));
-        list.add(Uri.parse("http://g.hiphotos.baidu.com/image/pic/item/9e3df8dcd100baa1cb7acbdb4210b912c8fc2e7f.jpg"));
-        list.add(Uri.parse("http://c.hiphotos.baidu.com/image/pic/item/cc11728b4710b912c2b57a9ec6fdfc039245225d.jpg"));
-        list.add(Uri.parse("http://d.hiphotos.baidu.com/image/pic/item/5882b2b7d0a20cf482c772bf73094b36acaf997f.jpg"));
-        list.add(Uri.parse("http://g.hiphotos.baidu.com/image/pic/item/10dfa9ec8a1363270c254f53948fa0ec09fac782.jpg"));
-        list.add(Uri.parse("http://c.hiphotos.baidu.com/image/pic/item/bf096b63f6246b6086073e14eef81a4c510fa241.jpg"));
-        list.add(Uri.parse("http://h.hiphotos.baidu.com/image/pic/item/80cb39dbb6fd5266cfe0b174ae18972bd5073682.jpg"));
-        list.add(Uri.parse("http://g.hiphotos.baidu.com/image/pic/item/9e3df8dcd100baa1cb7acbdb4210b912c8fc2e7f.jpg"));
-        list.add(Uri.parse("http://c.hiphotos.baidu.com/image/pic/item/cc11728b4710b912c2b57a9ec6fdfc039245225d.jpg"));
+        list.add(Uri.parse("http://pic1.win4000.com/wallpaper/a/57a0131036064.jpg"));
+        list.add(Uri.parse("http://pic17.nipic.com/20111122/6759425_152002413138_2.jpg"));
+        list.add(Uri.parse("http://pic24.nipic.com/20121003/10754047_140022530392_2.jpg"));
+        list.add(Uri.parse("http://pic9.nipic.com/20100827/4982229_103856887335_2.jpg"));
+        list.add(Uri.parse("http://attach.bbs.miui.com/forum/201309/27/181659trqmmw5x3t4gcigt.jpg"));
 
+        list.add(Uri.parse("http://pic1.win4000.com/wallpaper/a/57a0131036064.jpg"));
+        list.add(Uri.parse("http://pic17.nipic.com/20111122/6759425_152002413138_2.jpg"));
+        list.add(Uri.parse("http://pic24.nipic.com/20121003/10754047_140022530392_2.jpg"));
+        list.add(Uri.parse("http://pic9.nipic.com/20100827/4982229_103856887335_2.jpg"));
+        list.add(Uri.parse("http://attach.bbs.miui.com/forum/201309/27/181659trqmmw5x3t4gcigt.jpg"));
+
+        list.add(Uri.parse("http://pic1.win4000.com/wallpaper/a/57a0131036064.jpg"));
+        list.add(Uri.parse("http://pic17.nipic.com/20111122/6759425_152002413138_2.jpg"));
+        list.add(Uri.parse("http://pic24.nipic.com/20121003/10754047_140022530392_2.jpg"));
+        list.add(Uri.parse("http://pic9.nipic.com/20100827/4982229_103856887335_2.jpg"));
+        list.add(Uri.parse("http://attach.bbs.miui.com/forum/201309/27/181659trqmmw5x3t4gcigt.jpg"));
+
+        list.add(Uri.parse("http://pic1.win4000.com/wallpaper/a/57a0131036064.jpg"));
+        list.add(Uri.parse("http://pic17.nipic.com/20111122/6759425_152002413138_2.jpg"));
+        list.add(Uri.parse("http://pic24.nipic.com/20121003/10754047_140022530392_2.jpg"));
+        list.add(Uri.parse("http://pic9.nipic.com/20100827/4982229_103856887335_2.jpg"));
+        list.add(Uri.parse("http://attach.bbs.miui.com/forum/201309/27/181659trqmmw5x3t4gcigt.jpg"));
         findViewById(R.id.image)
                 .setOnClickListener(new View.OnClickListener() {
                     @Override
