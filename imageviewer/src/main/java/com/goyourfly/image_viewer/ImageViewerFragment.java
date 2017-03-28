@@ -16,20 +16,14 @@ import android.support.v4.util.LruCache;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.resource.bitmap.CenterCrop;
-import com.bumptech.glide.load.resource.bitmap.FitCenter;
-import com.bumptech.glide.load.resource.drawable.GlideDrawable;
-import com.bumptech.glide.request.animation.GlideAnimation;
-import com.bumptech.glide.request.target.SimpleTarget;
+import com.squareup.picasso.MemoryPolicy;
+import com.squareup.picasso.Picasso;
 
 import net.soulwolf.widget.ratiolayout.RatioDatumMode;
 import net.soulwolf.widget.ratiolayout.widget.RatioFrameLayout;
@@ -142,15 +136,11 @@ public class ImageViewerFragment extends Fragment {
         @Override
         public void onBindViewHolder(final MyViewHolder holder, int position) {
 
-            Glide.with(holder.imageView.getContext())
+            Picasso.with(holder.imageView.getContext())
                     .load(mData.get(position))
                     .placeholder(colorDrawable)
-                    .into(new SimpleTarget<GlideDrawable>() {
-                        @Override
-                        public void onResourceReady(GlideDrawable resource, GlideAnimation<? super GlideDrawable> glideAnimation) {
-                            holder.imageView.setImageDrawable(resource);
-                        }
-                    });
+                    .memoryPolicy(MemoryPolicy.NO_CACHE)
+                    .into(holder.imageView);
         }
 
         @Override

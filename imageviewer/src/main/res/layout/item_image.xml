@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<net.soulwolf.widget.ratiolayout.widget.RatioImageView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.goyourfly.image_viewer.RectRoundShadowImageView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/image"
     android:scaleType="centerCrop"
     android:layout_width="wrap_content"
     android:layout_height="match_parent">
-</net.soulwolf.widget.ratiolayout.widget.RatioImageView>
+</com.goyourfly.image_viewer.RectRoundShadowImageView>
