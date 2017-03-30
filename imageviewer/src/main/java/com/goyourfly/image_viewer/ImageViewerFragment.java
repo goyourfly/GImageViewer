@@ -22,6 +22,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.Picasso;
 
@@ -136,10 +137,9 @@ public class ImageViewerFragment extends Fragment {
         @Override
         public void onBindViewHolder(final MyViewHolder holder, int position) {
 
-            Picasso.with(holder.imageView.getContext())
+            Glide.with(holder.imageView.getContext())
                     .load(mData.get(position))
                     .placeholder(colorDrawable)
-                    .memoryPolicy(MemoryPolicy.NO_CACHE)
                     .into(holder.imageView);
         }
 
